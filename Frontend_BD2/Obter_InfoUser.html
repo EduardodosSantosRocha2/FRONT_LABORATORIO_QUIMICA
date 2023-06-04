@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obter Info User</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" id="nav">
+        <a class="navbar-brand" href="home.html">Química LAB</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Marcar_Aula.html">Marcar Aula</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Reservar.html">Reservar</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Realizar_Experimento.html">Realizar Experimentos</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="horarios.html">Horarios disponiveis</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="atualiza_turno.html">Atualiza turno</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="atualiza_turno.html">Atualiza turno</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Obter_InfoUser.html">Info User</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="aviso"></div>
+    <div class="container">   
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h1 class="text-center"></h1>
+                <form id="formInfo_User">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="CPF">CPF:</label>
+                            <input type="text" id="CPF" name="CPF" required class="form-control">
+                        </div>
+                    </div>
+                    <input type="submit" value="Info_User" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/infoU.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

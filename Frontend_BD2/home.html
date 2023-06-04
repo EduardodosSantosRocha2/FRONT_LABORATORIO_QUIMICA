@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Química LAB</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .card {
+            width: 300px;
+            margin: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+        
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        .card-img-top {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 130px;
+            height: 130px;
+        }
+        
+        .card-body {
+            text-align: center;
+        }
+        a{
+            color:black;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" id="nav">
+        <a class="navbar-brand" href="home.html">Química LAB</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Marcar_Aula.html">Marcar Aula</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Reservar.html">Reservar</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Realizar_Experimento.html">Realizar Experimentos</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="horarios.html">Horarios disponiveis</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="atualiza_turno.html">Atualiza turno</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="atualiza_turno.html">Atualiza turno</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Obter_InfoUser.html">Info User</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="Cadastrar_Usuario.html" class="card">
+                    <img src="assets/imgs/icone_user.png" alt="Imagem 1" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Cadastrar Usuário</h5>
+                        <p class="card-text">Nesta aba é possível realizar o cadastro de professores e técnicos</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="Cadastrar_Produto.html" class="card" >
+                    <img src="assets/imgs/icone_produto.png" alt="Imagem 2" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Cadastrar Produto</h5>
+                        <p class="card-text">Nesta aba é possivel cadastrar produtos</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="Cadastrar_Experimento.html" class="card">
+                    <img src="assets/imgs/notas_icone.png" alt="Imagem 3" class="card-img-top">  
+                    <div class="card-body">
+                        <h5 class="card-title">Cadastrar Experimento</h5>
+                        <p class="card-text">Nesta aba é possível cadastrar novos experimentos</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="Cadastrar_Prateleira.html" class="card">
+                    <img src="assets/imgs/prateleira_icone.png" alt="Imagem 6" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Cadastrar Prateleiras</h5>
+                        <p class="card-text">Aqui é possível cadastrar as prateleiras</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="Marcar_Aula.html" class="card">
+                    <img src="assets/imgs/icon_aula.png" alt="Imagem 6" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Cadastrar Aula</h5>
+                        <p class="card-text">Aqui é possível cadastrar as aulas que serão oferecidas</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="Buscar_Usuario.html" class="card">
+                    <img src="assets/imgs/lupa_icone.png" alt="Imagem 4" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Procurar Usuário</h5>
+                        <p class="card-text">Aqui é possível realizar a busca de usuários, editar e deletar</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="Buscar_Produto.html" class="card">
+                    <img src="assets/imgs/lupa_icone.png" alt="Imagem 5" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Procurar Produto</h5>
+                        <p class="card-text">Aqui é possível realizar a busca de produtos, editar e deletar</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="procurar_reserva.html" class="card">
+                    <img src="assets/imgs/lupa_icone.png" alt="Imagem 9" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Procurar Reservar</h5>
+                        <p class="card-text">Aqui é possível vizualizar o horario da reseva do laboratorio marcado</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="Buscar_aula.html" class="card">
+                    <img src="assets/imgs/lupa_icone.png" alt="Imagem 9" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Procurar Aula</h5>
+                        <p class="card-text">Aqui é possível vizualizar o horario da reseva do laboratorio marcado</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="Preparar_Experimento.html" class="card">
+                    <img src="assets/imgs/preparar_icon.png" alt="Imagem 6" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Preparar Experimento</h5>
+                        <p class="card-text">Aqui é possível realizar o registro de preparação</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="Relatorios.html" class="card">
+                    <img src="assets/imgs/reserva_icone.png" alt="Imagem 6" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Relatórios</h5>
+                        <p class="card-text">Aqui é possível vizualizar os relatórios</p>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+</div>
+
+    
+
+    
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/home.js"></script>
+</body>
+</html>
