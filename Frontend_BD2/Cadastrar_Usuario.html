@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <style>
+        body, html {
+            height: 100%;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" id="nav">
+        <a class="navbar-brand" href="home.html">Química LAB</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Marcar_Aula.html">Marcar Aula</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Reservar.html">Reservar</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Realizar_Experimento.html">Realizar Experimentos</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="horarios.html">Horarios disponiveis</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="atualiza_turno.html">Atualiza turno</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="atualiza_turno.html">Atualiza turno</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Obter_InfoUser.html">Info User</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="aviso"></div>
+    <div class="container">   
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h1 class="text-center">Cadastro de Usuário</h1>
+                <form id="userForm">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="cpf">CPF:</label>
+                            <input type="text" id="cpf" name="cpf" required class="form-control">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="senha">SENHA:</label>
+                            <input type="text" id="senha" name="senha" required class="form-control">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="nome">Nome:</label>
+                            <input type="text" id="nome" name="nome" required class="form-control">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="telefone">Telefone:</label>
+                            <input type="text" id="telefone" name="telefone" required class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipo">Tipo de Usuário:</label>
+                        <select id="tipo" name="tipo" required class="form-control">
+                            <option value="" disabled selected style="display:none;">Selecione uma opção</option>
+                            <option value="tecnico">Técnico</option>
+                            <option value="professor">Professor</option>
+                        </select>
+                    </div>
+
+                    <!-- Campos específicos para Técnico -->
+                    <div id="tecnico-fields" style="display: none;">
+                        <div class="form-group">
+                            <label for="certificado">Certificado:</label>
+                            <input type="text" id="certificado" name="certificado" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="crq">Número do CRQ:</label>
+                            <input type="number" id="crq" name="crq" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="carga_horaria">Carga Horária:</label>
+                            <input type="number" id="carga_horaria" name="carga_horaria" class="form-control">
+                        </div>
+                    </div>
+
+                    <!-- Campos específicos para Professor -->
+                    <div id="professor-fields" style="display: none;">
+                        <div class="form-group">
+                            <label for="curso_ministrados">Cursos Ministrados:</label>
+                            <input type="text" id="curso_ministrados" name="curso_ministrados" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="experiencia_ensino">Experiência de Ensino:</label>
+                            <textarea id="experiencia_ensino" name="experiencia_ensino" class="form-control"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="area_especializacao">Área de Especialização:</label>
+                            <input type="text" id="area_especializacao" name="area_especializacao" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="numAulas">Numero de aulas:</label>
+                        <input type="text" id="numAulas" name="numAulas" class="form-control">
+                    </div>
+
+                    <input type="submit" value="Cadastrar" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/cadastrar_usuario.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

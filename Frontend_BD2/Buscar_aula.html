@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body, html {
+            height: 100%;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" id="nav">
+        <a class="navbar-brand" href="home.html">Química LAB</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Marcar_Aula.html">Marcar Aula</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Reservar.html">Reservar</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Realizar_Experimento.html">Realizar Experimentos</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="horarios.html">Horarios disponiveis</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="atualiza_turno.html">Atualiza turno</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="atualiza_turno.html">Atualiza turno</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Obter_InfoUser.html">Info User</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="aviso"></div>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+        <form id="formAula">
+            <h1>Buscar Aula Referente</h1>
+            <div class="form-group">
+                <label for="id_Aula">ID AULA</label>
+                <input type="text" id="id_Aula" class="form-control">
+                <button class="btn btn-primary" type="button" id="btnBuscar">Buscar</button>
+            </div>
+            <div class="form-group">
+                <label for="professor">CPF do Professor</label>
+                <input type="text" id="cpf" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="topico">Tópico Principal:</label>
+                <input type="text" id="topico" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="nome">Nome da Aula:</label>
+                <input type="text" id="nome" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="topico">Temas Abordados:</label>
+                <textarea id="temas" class="form-control" ></textarea> 
+            </div>
+            <button type="submit" class="btn btn-primary" id="btnAlterar" style="background-color: rgb(29, 77, 23); border-color: black;">Alterar</button>
+            <button type="submit" class="btn btn-primary" id="btnDeletar" style="background-color: red; border-color: black;">Deletar</button>
+        </form>
+        </div>
+    </div>
+    </div>
+    <script src="assets/js/buscar_aula.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    
+</body>
+</html>

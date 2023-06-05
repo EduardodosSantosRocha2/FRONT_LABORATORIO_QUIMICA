@@ -1,0 +1,20 @@
+#nav {
+    background: linear-gradient(to bottom, #E2C2FF, #ffffff); /* Gradiente de tons pasteis */ 
+}
+
+body{
+    min-height: 85vh;
+    background: linear-gradient(to bottom, #E2C2FF, #A3EFFF); /* Gradiente de tons pasteis */ 
+}
+
+#tabelaInfoAulas, #tabelaInfoPreparacoes {
+    max-height: 400px; /* Defina a altura máxima desejada para a tabela */
+    overflow-y: auto; /* Adicione rolagem vertical quando a tabela exceder a altura máxima */  
+    top: 10%;
+    margin-left:20%;
+}
+
+.card{
+    border: black solid ;
+    background: linear-gradient(to bottom, #E2C2FF, #A3EFFF); /* Gradiente de tons pasteis */ 
+}
