@@ -1,9 +1,0 @@
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: linear-gradient(to bottom, #E2C2FF, #A3EFFF); /* Gradiente de tons pasteis */ 
-
-}
-
