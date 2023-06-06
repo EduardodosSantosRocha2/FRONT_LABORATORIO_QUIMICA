@@ -181,7 +181,7 @@ document.getElementById("userForm").addEventListener("submit", function (event) 
             .then(response => response.json())
             .then(data => {
                 console.log(data.status);
-                if (data.status === 2) {
+                if (data.status === true) {
 
                     // Seleciona o formulário pelo ID
                     var form = document.getElementById('userForm');
