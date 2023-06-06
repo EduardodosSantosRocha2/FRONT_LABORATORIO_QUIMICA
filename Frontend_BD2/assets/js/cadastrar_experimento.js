@@ -42,7 +42,6 @@
 document.getElementById("formExperimento").addEventListener("submit", function (event) {
   event.preventDefault(); // Evita o envio do formulário
 
-  // Obtém os valores dos campos do formulário
   var objetivo = document.getElementById("objetivo").value;
   var nome = document.getElementById("nome").value;
   var numeroExperimento = document.getElementById("numeroExperimento").value;
@@ -50,45 +49,84 @@ document.getElementById("formExperimento").addEventListener("submit", function (
   var discussao = document.getElementById("discussao").value;
   var imagemFile = document.getElementById("imagem").files[0];
   var vezesRealizadas = document.getElementById("vezesRealizadas").value;
+  var arquivoIMG;
+  var arquivoPDF;
+  var cont = 0;
 
-  // Cria um objeto JSON com os dados do formulário
   var jsonData = {
-    objetivo: objetivo,
-    nome: nome,
-    numeroExperimento: numeroExperimento,
-    discussao: discussao,
-    vezesRealizadas: vezesRealizadas,
-    arquivoIMG: "",
-    arquivoPDF: ""
-  };
+        objetivo: objetivo,
+        nome: nome,
+        numeroExperimento: numeroExperimento,
+        discussao: discussao,
+        vezesRealizadas: vezesRealizadas
+    };
 
 
-  // Converte a imagem para Base64
+
+
+  // // Converte o arquivo imagem para Base64
+
   if (imagemFile) {
     var readerImagem = new FileReader();
     readerImagem.onloadend = function () {
-      var base64Imagem = readerImagem.result;
-      jsonData.arquivoIMG = base64Imagem;
+      let imgBase64 = readerImagem.result;
+      arquivoIMG = imgBase64;
+      mostrarValorArquivoIMG(arquivoIMG);
     };
     readerImagem.readAsDataURL(imagemFile);
+
   }
 
   // Converte o arquivo PDF para Base64
   if (pdfFile) {
     var readerPDF = new FileReader();
     readerPDF.onloadend = function () {
-      var base64PDF = readerPDF.result;
-      jsonData.arquivoPDF = base64PDF;
+      var pdfBase64 = readerPDF.result;
+      const substring = 'data:application/pdf;base64,';
+      pdfBase64 = pdfBase64.replace(substring, '');
+      arquivoPDF = pdfBase64;
+      mostrarValorArquivoPDF(arquivoPDF);
     };
     readerPDF.readAsDataURL(pdfFile);
-
   }
+
+  function mostrarValorArquivoPDF(valor) {
+    console.log('PDF');
+    console.log(valor);
+    atualizarJson(valor, 'arquivoIMG');
+  }
+
+  function mostrarValorArquivoIMG(valor1) {
+    console.log('IMG');
+    console.log(valor1);
+    atualizarJson(valor1, 'arquivoPDF');
+  }
+
+
+  function atualizarJson(valor, campo) {
+    jsonData[campo] = valor;
+    cont++;
+    if (cont === 2) {
+      enviarDadosParaAPI(jsonData);
+    }
+}
+
+
+
+
+  // //
+
+
+
+
+
+
 
 
   // Verifica se todos os campos estão preenchidos antes de enviar para a API
-  if (validarCampos(jsonData)) {
-    enviarDadosParaAPI(jsonData);
-  }
+  // if (validarCampos(jsonData)) {
+  //   enviarDadosParaAPI(jsonData);
+  // }
 
 
 
@@ -146,13 +184,13 @@ function enviarDadosParaAPI(jsonData) {
 
     })
     .catch(error => {
-        var containerElement = document.getElementById('aviso');
-        var alertElement = document.createElement('div');
-        alertElement.classList.add('alert', 'alert-danger');
-        alertElement.textContent = 'Experimento não cadastrado, pois numero do experiemnto já existe!';
-        // Adicionar o elemento de alerta ao DOM
-        var containerElement = document.getElementById('aviso');
-        containerElement.appendChild(alertElement);
+      var containerElement = document.getElementById('aviso');
+      var alertElement = document.createElement('div');
+      alertElement.classList.add('alert', 'alert-danger');
+      alertElement.textContent = 'Experimento não cadastrado, pois numero do experiemnto já existe!';
+      // Adicionar o elemento de alerta ao DOM
+      var containerElement = document.getElementById('aviso');
+      containerElement.appendChild(alertElement);
       console.error(error);
     });
 

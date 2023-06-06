@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/img.css">
+    <style>
+        body,
+        html {
+            height: 100%;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        h2{
+            justify-content: center;
+        }
+        #pdf-viewer {
+            margin: auto;
+            width: 90%;
+            height: 100vh;
+        }
+        #base64-input{
+          width: 100%;
+          height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light" id="nav">
+        <a class="navbar-brand" href="home.html">Química LAB</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Marcar_Aula.html">Marcar Aula</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Reservar.html">Reservar</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Realizar_Experimento.html">Realizar Experimentos</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="horarios.html">Horarios disponiveis</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="atualiza_turno.html">Atualiza turno</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="atualiza_turno.html">Atualiza turno</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Obter_InfoUser.html">Info User</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="aviso"></div>
+    <h1 class="text-center">Realizar_Experimento</h1>
+    <div class="container mx-auto text-center">
+        <div class="card">
+            <div class="card-body">
+                <form id="formAula">
+                    <label for="NumeroExperimentos">Numero Experimentos:</label>
+                    <input type="text" id="NumeroExperimentos" name="NumeroExperimentos" required class="form-control">
+                </form>
+                <button class="btn btn-primary" type="button" id="btnBuscar">Buscar</button>
+            </div>
+        </div>
+    </div>
+    <div id="pdf-viewer"></div>
+    <script src="assets/js/buscar_PDF.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

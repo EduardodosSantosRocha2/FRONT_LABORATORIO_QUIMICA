@@ -42,6 +42,7 @@ var aula = {};
 //atributos de usuarios
 
 document.getElementById("btnBuscar").addEventListener("click", function () {
+    console.log('buscar');
     event.preventDefault();
     var id = document.getElementById('id').value;
     mostrar(id);
@@ -81,15 +82,17 @@ document.getElementById("btnAlterar").addEventListener("click", function () {
     arquivoPDF: ""
   };
 
-   // Converte a imagem para Base64
-   if (imagemFile) {
-    var readerImagem = new FileReader();
-    readerImagem.onloadend = function () {
-      var base64Imagem = readerImagem.result;
-      jsonData.arquivoIMG = base64Imagem;
-    };
-    readerImagem.readAsDataURL(imagemFile);
-  }
+//    Converte a imagem para Base64
+//    if (imagemFile) {
+//     var readerImagem = new FileReader();
+//     readerImagem.onloadend = function () {
+//       var base64Imagem = readerImagem.result;
+//       jsonData.arquivoIMG = base64Imagem;
+//     };
+//     readerImagem.readAsDataURL(imagemFile);
+//   }
+
+
 
   // Converte o arquivo PDF para Base64
   if (pdfFile) {
