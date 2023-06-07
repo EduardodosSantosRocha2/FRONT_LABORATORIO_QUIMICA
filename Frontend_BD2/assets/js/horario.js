@@ -31,7 +31,7 @@ function addReserva(reservalab) {
         .then(response => response.json())
         .then(data => {
 
-            if (data.valor === 1) {
+            if (data.valor === 2) {
 
                 // Seleciona o formulário pelo ID
 
