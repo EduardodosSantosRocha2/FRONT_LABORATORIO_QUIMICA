@@ -47,7 +47,7 @@ document.getElementById("formExperimento").addEventListener("submit", function (
     const experimento_numero = document.getElementById('numeroExperimento').value;
     const tecnico_cpf = document.getElementById('cpfTecnico').value;
     const quantidade = document.getElementById('quantidade').value;
-    
+
 
 
     var jsonData = {
@@ -111,10 +111,14 @@ function enviarDadosParaAPI(jsonData) {
 
             }
             else {
+                const message = data.status;
+                const errorMessage = message.split("ERROR: ")[1].split(" CONTEXT:")[0];
+                console.log(errorMessage); // "Quantidade de produto não disponível"
+                
                 var containerElement = document.getElementById('aviso');
                 var alertElement = document.createElement('div');
                 alertElement.classList.add('alert', 'alert-danger');
-                alertElement.textContent = 'Experimento preparado não cadastrado!';
+                alertElement.textContent = 'Preparação não cadastrada: '+errorMessage;
                 // Adicionar o elemento de alerta ao DOM
                 var containerElement = document.getElementById('aviso');
                 containerElement.appendChild(alertElement);
@@ -130,7 +134,7 @@ function enviarDadosParaAPI(jsonData) {
             var containerElement = document.getElementById('aviso');
             var alertElement = document.createElement('div');
             alertElement.classList.add('alert', 'alert-danger');
-            alertElement.textContent = 'Experimento não cadastrado, pois numero do experiemnto já existe!';
+            alertElement.textContent = 'CPF invalido!';
             // Adicionar o elemento de alerta ao DOM
             var containerElement = document.getElementById('aviso');
             containerElement.appendChild(alertElement);
