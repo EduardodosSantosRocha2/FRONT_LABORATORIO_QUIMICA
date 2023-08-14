@@ -1,4 +1,4 @@
-# Trabalho de Banco de dados 2 - Guilherme Fernandes, Gabriel Braga, Eduardo Santos
+# Trabalho de Banco de dados 2 Front-End - Guilherme Fernandes, Gabriel Braga, Eduardo Santos
 
 
 
